@@ -6,3 +6,15 @@ export const fetchTodos = () => {
     })
   );
 };
+
+export const postTodo = (todo) => {
+  return(
+    $.ajax({
+      method: 'POST',
+      url: 'api/todos',
+      data: {
+        todo
+      }
+    })
+  );
+};
